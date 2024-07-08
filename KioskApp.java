@@ -6,13 +6,15 @@ public class KioskApp {
         Scanner scanner = new Scanner(System.in);
         Order order = new Order();
 
-        // 상품 메뉴 생성
+        
         Product pizza = new Product("피자", "치즈가 풍부한 맛있는 피자", 12000);
         Product pasta = new Product("파스타", "신선한 재료로 만든 파스타", 10000);
         Product salad = new Product("샐러드", "건강하고 신선한 채소의 조합", 8000);
         Product hambuger= new Product("햄버거","육즙이 살아있는 햄버거",10000);
+        
+        
 
-        // 메인 메뉴판 화면
+        
         System.out.println("===== 메인 메뉴판 =====");
         System.out.println("1. " + pizza.getName() + " - " + pizza.getDescription());
         System.out.println("2. " + pasta.getName() + " - " + pasta.getDescription());
@@ -50,7 +52,7 @@ public class KioskApp {
         }
     }
 
-    // 주문 화면 구현
+    
     public static void orderScreen(Scanner scanner, Order order) {
         System.out.println("===== 주문 화면 =====");
         order.showCart();
@@ -70,12 +72,12 @@ public class KioskApp {
         }
     }
 
-    // 주문 완료 화면 구현
+    
     public static void completeOrder(Order order) {
         System.out.println("===== 주문 완료 =====");
         System.out.println("주문이 완료되었습니다. 대기번호를 발급합니다.");
 
-        // 장바구니 초기화
+    
         order.clearCart();
 
         // 3초 후 메인 메뉴판으로 돌아가는 시뮬레이션
@@ -85,11 +87,11 @@ public class KioskApp {
             e.printStackTrace();
         }
 
-        // 메인 메뉴판으로 돌아가는 로직
+        
         System.out.println("메인 메뉴판으로 돌아갑니다.");
     }
 
-    // 주문 취소 화면 구현
+    
     public static void cancelScreen(Scanner scanner, Order order) {
         System.out.println("===== 주문 취소 확인 =====");
         System.out.println("주문을 취소하시겠습니까?");
