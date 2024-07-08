@@ -65,7 +65,6 @@ public class KioskApp {
                 completeOrder(order);
                 break;
             case "2":
-                // 메인 메뉴판으로 돌아감
                 break;
             default:
                 System.out.println("잘못된 입력입니다. 다시 선택해주세요.");
