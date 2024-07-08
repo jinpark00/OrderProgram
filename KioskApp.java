@@ -79,7 +79,6 @@ public class KioskApp {
     
         order.clearCart();
 
-        // 3초 후 메인 메뉴판으로 돌아가는 시뮬레이션
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
