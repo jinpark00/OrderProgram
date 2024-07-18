@@ -1,14 +1,28 @@
 package OrderProgram;
+public class Product {
+    private String name;
+    private String description;
+    private double price;
 
-public class Product extends Menu {
-        private int price;
-
-        public Product(String name, String description, int price) {
-            super(name, description);
-            this.price = price;
-        }
-
-        public int getPrice() {
-            return price;
-        }
+    public Product(String name, String description, double price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void print() {
+        System.out.println(getName() + "\t\t| W " + getPrice() + " | " + getDescription());
+    }
+}
